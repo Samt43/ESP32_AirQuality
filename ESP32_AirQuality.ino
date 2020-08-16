@@ -1,6 +1,5 @@
 #include <U8g2lib.h>
 
-
 /* SDS011 PINEOUT
  * SDS011 pineout on ESP_32 Serial2
  * SDS011 TXD on GPIO-16 (ESP_32 RXD)
@@ -57,6 +56,8 @@ void setup() {
 
   // Init screen library
   u8g2.begin();
+
+  initBLEService();
 }
 
 /*
@@ -117,6 +118,9 @@ bool processTrame(const uint8_t* data)
 
         // We display datas on device's screen
         display(pm_2_5, pm_10);
+
+        // BLE update
+        setBLEPMValues(pm_2_5, pm_10);
         // Success !
         ret = true;
     }
