@@ -9,7 +9,7 @@ Device that measures and displays PM concentations using SDS011 sensor
 
 - ESP32 NodeMCU WLAN CP2102
 
-###Pinout  : 
+### Pinout  : 
 
 * SDS011 PINOUT :
  
